@@ -18,13 +18,8 @@ describe('islice Suite Tests', function () {
         assert.equal(true, test.next().done)
     });
 
-    it(`islice(range(5), -3) -> generator [0, 1, 2]`, function () {
-        assert.equal('voir comment traiter', 'les nombres inferieur à 0 sur islice')
-        const test = islice(range(5), -3)
-        for (let value of [0, 1, 2]) {
-            assert.equal(value, test.next().value)
-        }
-        assert.equal(true, test.next().done)
+    it(`islice(range(5), -3).next() throws RangeError`, function () {
+        assert.throws(_ => islice(range(10), -3).next(), RangeError)
     });
 
     it(`islice(range(10), 1, 9) -> generator [1, 2, 3, 4, 5, 6, 7, 8]`, function () {

@@ -1,0 +1,10 @@
+[
+  "range",
+  "count",
+  "cycle",
+  "repeat",
+  "chain",
+  "enumerate",
+  "islice",
+  "morceaux"
+]

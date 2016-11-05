@@ -1,0 +1,1 @@
+require('./methods.json').forEach(test => require(`./tests/${test}`))

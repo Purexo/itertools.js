@@ -1,8 +1,8 @@
 module.exports =
 // export default
 function* chain(...iterables) {
-    for (iterable of iterables) {
-        for (item of iterable) {
+    for (let iterable of iterables) {
+        for (let item of iterable) {
             yield item;
         }
     }
