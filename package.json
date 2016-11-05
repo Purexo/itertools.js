@@ -1,0 +1,29 @@
+{
+  "name": "itertools.js",
+  "version": "1.0.0",
+  "description": "This repository will bring you the power of python itertools in ES6 - https://docs.python.org/3/library/itertools.html - Inspiration par sam & max - http://sametmax.com/parcourir-un-iterable-par-morceaux-en-python/ http://sametmax.com/un-tools-ditertour-ou-linverse/ ",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/purexo/itertools.js.git"
+  },
+  "keywords": [
+    "python",
+    "itertools"
+  ],
+  "author": "Purexo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/purexo/itertools.js/issues"
+  },
+  "homepage": "https://github.com/purexo/itertools.js#readme",
+  "devDependencies": {
+    "mocha": "^3.1.2"
+  }
+}
