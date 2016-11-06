@@ -5,6 +5,7 @@
   "repeat",
   "chain",
   "enumerate",
+  "accumulate",
   "islice",
   "morceaux"
 ]
