@@ -1,9 +1,11 @@
 [
   "range",
+  "iter",
   "count",
   "cycle",
   "repeat",
   "chain",
+  "dropwhile",
   "enumerate",
   "accumulate",
   "islice",

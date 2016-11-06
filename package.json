@@ -7,7 +7,8 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha tests.js"
+    "test": "./node_modules/.bin/mocha tests.js",
+    "mocha": "./node_modules/.bin/mocha"
   },
   "repository": {
     "type": "git",
@@ -15,7 +16,8 @@
   },
   "keywords": [
     "python",
-    "itertools"
+    "itertools",
+    "ES6"
   ],
   "author": "Purexo",
   "license": "MIT",

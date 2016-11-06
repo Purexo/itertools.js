@@ -1,13 +1,13 @@
+// import range from 'range';
+
+const iter = require('./iter')
+
 const sum = (a, b) => a + b
 
 module.exports =
     // export default
 function* accumulate(iterable = [], callback = sum) {
-    const it = iterable[Symbol.iterator] ?
-        iterable[Symbol.iterator]() :
-        typeof iterable.next == 'function' ?
-            iterable :
-            [][Symbol.iterator]();
+    const it = iter(iterable)
 
     let next = it.next()
     if (next.done) {
