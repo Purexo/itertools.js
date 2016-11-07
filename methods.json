@@ -6,6 +6,7 @@
   "repeat",
   "chain",
   "dropwhile",
+  "takewhile",
   "filterfalse",
   "filter",
   "map",
