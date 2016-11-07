@@ -8,6 +8,7 @@
   "dropwhile",
   "filterfalse",
   "filter",
+  "map",
   "starmap",
   "enumerate",
   "accumulate",
