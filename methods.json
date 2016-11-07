@@ -6,6 +6,7 @@
   "repeat",
   "chain",
   "dropwhile",
+  "filterfalse",
   "enumerate",
   "accumulate",
   "islice",
