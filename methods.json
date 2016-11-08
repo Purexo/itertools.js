@@ -11,6 +11,7 @@
   "filter",
   "map",
   "starmap",
+  "product",
   "enumerate",
   "accumulate",
   "islice",
