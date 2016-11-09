@@ -23,7 +23,7 @@ function* product(options) {
         for (let x of result) {
             for (let y of pool) {
                 let list = [...x]
-                list.push(y)
+                list.push([y])
                 result = [...list]
             }
         }
