@@ -1,35 +1,29 @@
+const repeat = require('./repeat');
+
 module.exports =
     // export default
 function* product(options) {
-    // options = {args: [...args], repeat: 1}
-    // options = ...args
-    function * buildPools(args) {
-        for (let pool of args) {
-            yield [pool]
-        }
-    }
+    // product({args: [...args], repeat: 1})
+    // product(...args)
 
-    let pools;
+    let pool;
     if (arguments.length == 1 && options.hasOwnProperty('args')) {
         options.repeat = options.repeat || 1
-        pools = [...repeat([...buildPools(options.args)], options.repeat)]
+        pool = [...repeat([...options.args], options.repeat)]
     }
     else {
-        pools = [...buildPools(arguments)]
+        pool = [...arguments]
     }
-    let result = [[]]
 
-    for (let pool of pools) {
-        for (let x of result) {
-            for (let y of pool) {
-                let list = [...x]
-                list.push([y])
-                result = [...list]
+    // thx to heenenee : http://stackoverflow.com/a/39112625
+    function* doCartesian(i, prod) {
+        if (i == pool.length) {
+            yield prod;
+        } else {
+            for (let j = 0; j < pool[i].length; j++) {
+                yield* doCartesian(i + 1, prod.concat([pool[i][j]]));
             }
         }
     }
-
-    for (let prod of result) {
-        yield [prod]
-    }
+    yield* doCartesian(0, []);
 }
