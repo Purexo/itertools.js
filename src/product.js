@@ -14,6 +14,13 @@ function* product(options) {
     else {
         pool = [...arguments]
     }
+    let isString = true
+    for (let item of pool) {
+        if (typeof item != 'string') {
+            isString = false
+            break
+        }
+    }
 
     // thx to heenenee : http://stackoverflow.com/a/39112625
     function* doCartesian(i, prod) {
@@ -25,5 +32,14 @@ function* product(options) {
             }
         }
     }
-    yield* doCartesian(0, []);
+    function* doCartesianString(i, prod) {
+        if (i == pool.length) {
+            yield prod;
+        } else {
+            for (let j = 0; j < pool[i].length; j++) {
+                yield* doCartesian(i + 1, prod.concat(pool[i][j]));
+            }
+        }
+    }
+    yield* isString ? doCartesianString(0, '') : doCartesian(0, []);
 }
